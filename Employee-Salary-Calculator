@@ -1,0 +1,29 @@
+# Employee Salary Calculation
+
+basic_salary = float(input("Enter Basic Salary: "))
+
+# Allowances
+#hra(house rent allowance)
+#da(dearness allowance)
+hra = 0.20 * basic_salary      # 20% HRA
+da = 0.10 * basic_salary       # 10% DA
+
+# Gross Salary
+gross_salary = basic_salary + hra + da
+
+# Deductions
+#pfprovident f
+pf = 0.12 * basic_salary       # 12% PF
+tax = 0.05 * gross_salary      # 5% Tax
+
+# Net Salary
+net_salary = gross_salary - (pf + tax)
+
+print("\n--- Salary Details ---")
+print("Basic Salary:", basic_salary)
+print("HRA:", hra)
+print("DA:", da)
+print("Gross Salary:", gross_salary)
+print("PF Deduction:", pf)
+print("Tax Deduction:", tax)
+print("Net Salary:", net_salary)
